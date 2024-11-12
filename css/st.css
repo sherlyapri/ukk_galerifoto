@@ -1,0 +1,325 @@
+body {
+          font-family: Arial, sans-serif;
+          background-color: #F8C8D8; /* Warna background pink muda */
+          margin: 0;
+          padding: 0;
+      }
+      
+      .section {
+          padding: 20px;
+          position: relative; /* Tambahkan posisi relatif untuk menetapkan posisi absolut pada tombol Back */
+      }
+      
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+      
+      h2 {
+          text-align: center;
+          margin-bottom: 30px;
+          color: #D5006D; /* Warna pink gelap */
+      }
+      
+      /* Tombol Back */
+      .back-button {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          text-decoration: none;
+          color: #D5006D; /* Warna pink gelap */
+          font-size: 16px;
+          font-weight: bold;
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          box-shadow: 0 4px 6px #D5006D;
+      }
+      
+      .back-button:hover {
+          background-color: #D5006D;
+          color: #fff;
+      }
+      
+      /* Tombol Tambah Foto */
+      .add-button {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          text-decoration: none;
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 10px 20px;
+          background-color: #D5006D; /* Warna pink gelap */
+          border-radius: 5px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          box-shadow: 0 4px 6px #D5006D;
+      }
+      
+      .add-button:hover {
+          background-color: #fff;
+          color: #D5006D;
+      }
+      
+      /* Box Styles */
+      .box {
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 20px; /* Tambahkan padding bawah untuk menghindari pemangkasan saat scroll */
+          display: flex;
+      }
+      
+      .slide {
+          flex-shrink: 0;
+          margin-right: 20px;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px #D5006D;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          background-color: #F1C6E7; /* Warna latar belakang slide pink muda */
+          cursor: pointer; /* Tambahkan kursor pointer untuk menunjukkan elemen dapat diklik */
+      }
+      
+      .slide:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      img {
+          display: block;
+          width: 222px; /* Atur lebar gambar */
+          height: 190px; /* Atur tinggi gambar */
+          object-fit: cover; /* Memastikan gambar terpotong jika ukuran tidak sesuai */
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          transition: transform 0.3s ease;
+      }
+      
+      .slide:hover img {
+          transform: scale(1.05);
+      }
+      
+      .keterangan {
+          padding: 10px;
+          padding-bottom: 1px;
+          padding-top: 1px;
+          margin: 5px;
+          text-align: left;
+          font-size: 14px;
+          color: #000; /* Ubah warna teks menjadi hitam */
+      }
+      
+      .keterangan h3 {
+          text-align: left;
+          margin-bottom: 1px;
+          margin-top: 1px;
+          padding-bottom: 1px;
+          padding-top: 1px; /* Perbaikan typo */
+          color: #D5006D; /* Warna pink gelap */
+          font-size: 16px;
+      }
+      
+      .aksi {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 17px;
+          margin-top: 1px;
+          margin-bottom: 10px;
+      }
+      
+      .aksi a {
+          text-decoration: none;
+          color: #fff;
+          padding: 4px 6px;
+          margin: 0 3px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          background-color: #D5006D; /* Warna pink gelap */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-size: 10px;
+      }
+      
+      .aksi a.like {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          position: relative;
+      }
+      
+      .aksi a.like i {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: #ccc;
+          transition: color 0.3s ease;
+      }
+      
+      .aksi a.like:hover i {
+          color: red;
+      }
+      
+      .aksi a.like:hover::before,
+      .aksi a.like:hover::after {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-color: red;
+          border-radius: 50%;
+          animation: pulse 1s infinite;
+          z-index: -1;
+      }
+      
+      .aksi a.like:hover::before {
+          animation-delay: 0.2s;
+      }
+      
+      .aksi a.like:hover::after {
+          animation-delay: 0.4s;
+      }
+      
+      @keyframes pulse {
+          0% {
+              transform: scale(0);
+              opacity: 0.5;
+          }
+          100% {
+              transform: scale(1);
+              opacity: 0;
+          }
+      }
+      
+      .aksi a.komentar {
+          background-color: #DA7910;
+      }
+      
+      .aksi a:hover {
+          background-color: #D5006D;
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      
+      .aksi a:hover.komentar {
+          background-color: #DA7910;
+      }
+      
+      .info {
+          padding: 1px;
+          text-align: center;
+          margin-top: 5px;
+          font-size: 15px;
+          color: #D5006D; /* Warna pink gelap */
+          background-color: #fff;
+          border-radius: 0 0 10px 10px;
+          box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .no-data {
+          text-align: center;
+          color: #666;
+          margin-top: 20px;
+          font-size: 14px;
+      }
+      
+      /* Modal Styles */
+      .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1000; /* Sit on top */
+          left: 0;
+          top: 0;
+          padding-top: 50px;
+          width: 100%;
+          height: 100%;
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+      
+      .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 600px; /* Adjust max-width as needed */
+          padding: 20px;
+          background-color: #fefefe;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      
+      .modal-content img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+      }
+      
+      /* Close button */
+      .close {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          color: #fff;
+          font-size: 30px;
+          font-weight: bold;
+          cursor: pointer;
+      }
+      
+      .close:hover,
+      .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+      }
+      
+      /* Caption of Modal Image */
+      .caption {
+          margin-top: 20px;
+          text-align: center;
+          color: #000; /* Ubah warna teks menjadi hitam */
+      }
+      
+      /* Navigasi gambar */
+      .prev,
+      .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+      }
+      
+      /* Style the "next" button */
+      .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+      }
+      
+      /* Position the "prev" and "next" button */
+      .prev {
+          left: 0;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+      }
+      

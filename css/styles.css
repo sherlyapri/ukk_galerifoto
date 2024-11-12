@@ -1,0 +1,141 @@
+/* Umum */
+body {
+          font-family: 'Roboto', sans-serif;
+          background-color: #e0e5ec; /* Mengurangi kecerahan dengan warna abu-abu lembut */
+          color: #333;
+          margin: 0;
+          padding: 0;
+      }
+      
+      header {
+          background-color: #e91e63; /* Pink gelap */
+          color: white;
+          padding: 15px 0;
+          text-align: center;
+      }
+      
+      h1 {
+          font-size: 2rem;
+          margin: 0;
+      }
+      
+      /* Menu Navigasi */
+      ul {
+          background-color: #444; /* Warna latar belakang menu lebih gelap */
+          padding: 10px;
+          margin: 0;
+          list-style-type: none;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+      }
+      
+      ul li {
+          display: inline;
+      }
+      
+      ul li a {
+          color: white;
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+      }
+      
+      ul li a:hover {
+          background-color: #616161; /* Hover lebih lembut */
+      }
+      
+      /* Pesan (Sukses / Error) */
+      .message {
+          text-align: center;
+          font-size: 1rem;
+          padding: 10px;
+          border-radius: 5px;
+          margin-top: 20px;
+      }
+      
+      .message.success {
+          background-color: #e91e63; /* Pink gelap */
+          color: white;
+      }
+      
+      .message.error {
+          background-color: #d32f2f; /* Merah lebih gelap */
+          color: white;
+      }
+      
+      /* Form */
+      form {
+          background-color: #f9f9f9; /* Warna latar belakang form lebih lembut */
+          margin: 20px auto;
+          padding: 20px;
+          border-radius: 8px;
+          width: 80%;
+          max-width: 500px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      form table {
+          width: 100%;
+      }
+      
+      form input[type="text"],
+      form input[type="submit"] {
+          padding: 10px;
+          width: 100%;
+          margin: 8px 0;
+          border-radius: 5px;
+          border: 1px solid #ccc; /* Warna border lebih lembut */
+      }
+      
+      form input[type="submit"] {
+          background-color: #e91e63; /* Pink gelap */
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+      
+      form input[type="submit"]:hover {
+          background-color: #c2185b; /* Hover lebih gelap */
+      }
+      
+      /* Tabel Album */
+      table {
+          width: 80%;
+          margin: 20px auto;
+          border-collapse: collapse;
+          background-color: #fafafa; /* Latar belakang tabel lebih lembut */
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      th,
+      td {
+          padding: 12px 15px;
+          border: 1px solid #ccc; /* Border lebih lembut */
+          text-align: left;
+      }
+      
+      th {
+          background-color: #e91e63; /* Pink gelap */
+          color: white;
+      }
+      
+      tr:nth-child(even) {
+          background-color: #f7f7f7; /* Latar belakang baris genap lebih lembut */
+      }
+      
+      /* Tautan Aksi */
+      a {
+          text-decoration: none;
+          padding: 5px 10px;
+          color: white;
+          background-color: #ff4081; /* Pink lebih lembut */
+          border-radius: 5px;
+          margin-right: 5px;
+      }
+      
+      a:hover {
+          background-color: #f50057; /* Hover lebih gelap */
+      }
+      

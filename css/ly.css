@@ -1,0 +1,73 @@
+/* CSS untuk Container */
+.container {
+          max-width: 1200px; /* Lebar maksimal kontainer */
+          margin: 0 auto; /* Agar kontainer berada di tengah */
+      }
+      
+      .section-title {
+          font-size: 2.5rem; /* Ukuran font lebih besar untuk judul */
+          margin-bottom: 30px;
+          text-align: center; /* Menjaga agar judul rata tengah */
+      }
+      
+      /* Kontainer kategori, gunakan Flexbox */
+      .category-container {
+          display: flex;
+          flex-wrap: wrap; /* Membungkus elemen jika ruang terbatas */
+          justify-content: space-between; /* Memberikan jarak antar elemen */
+          gap: 30px; /* Menambah jarak antar item kategori */
+      }
+      
+      /* Setiap item kategori */
+      .category-item {
+          width: 32%; /* Lebar tiap item kategori 32%, sehingga 3 item per baris */
+          margin-bottom: 30px; /* Memberikan jarak bawah antar item */
+          box-sizing: border-box; /* Agar margin dan padding dihitung dalam lebar */
+          text-align: center; /* Menjaga teks di tengah */
+      }
+      
+      .category-item img {
+          width: 100%; /* Gambar mengikuti lebar item kategori */
+          height: 250px; /* Menentukan tinggi gambar yang lebih besar */
+          object-fit: cover; /* Menjaga gambar tidak terdistorsi dan mengisi ruang */
+          border-radius: 10px; /* Membuat sudut gambar melengkung */
+      }
+      
+      .category-name {
+          font-size: 1.6rem; /* Ukuran font lebih besar untuk nama kategori */
+          margin-top: 15px;
+          font-weight: bold;
+          color: #333;
+      }
+      
+      .category-description {
+          font-size: 1.2rem; /* Ukuran font lebih besar untuk deskripsi kategori */
+          color: #555;
+          margin-top: 10px;
+      }
+      
+      .category-link {
+          text-decoration: none; /* Menghilangkan underline pada link */
+          color: inherit; /* Warna teks mengikuti warna default */
+      }
+      
+      /* Responsif untuk layar lebih kecil (misalnya ponsel) */
+      @media (max-width: 768px) {
+          .category-item {
+              width: 100%; /* Semua item menempati 1 kolom penuh pada perangkat kecil */
+              margin-bottom: 20px; /* Jarak antar item lebih kecil pada perangkat kecil */
+          }
+      
+          .category-name {
+              font-size: 1.4rem; /* Ukuran nama kategori sedikit lebih kecil pada layar kecil */
+          }
+      
+          .category-description {
+              font-size: 1rem; /* Ukuran deskripsi lebih kecil pada layar kecil */
+          }
+      
+          .category-item img {
+              height: 200px; /* Menurunkan tinggi gambar pada layar kecil */
+          }
+      }
+      
